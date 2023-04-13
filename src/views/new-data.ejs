@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%-include("partials/header")%>
+
+    <%-include("partials/custom")%>
+
+
+    <title>Crear libro</title>
+</head>
+<body>
+    
+    <%- include("partials/navigation")%>
+    
+    <div class="container-data">
+
+
+        <form method="POST" action="new-data">
+            <label for="title">Titulo</label>
+            <input type="text" name="title" placeholder="ingresa un titulo" autofocus required>
+
+
+            <label for="author">Autor</label>
+            <input type="text" name="author" placeholder="ingresa el autor" autofocus required>
+
+
+            <label for="images">Imagen</label>
+            <input type="text" name="images" placeholder="https://website.com/" autofocus required>
+
+            <label for="description">Descripción</label>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+
+            <input type="submit" value="Ingresar libro">
+        </form>
+
+     
+
+
+
+
+    </div>
+</body>
+</html>

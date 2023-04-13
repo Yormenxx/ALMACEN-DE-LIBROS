@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%-include("partials/header")%>
+
+    <%-include("partials/custom")%>
+
+    <title>Inicio libros</title>
+
+</head>
+<body>
+
+    <%- include("partials/navigation")%>
+
+    <div class="container-cards">
+
+        <div class="row">
+
+            <% books.forEach(function(book){ %>
+
+                <div class="card">
+
+
+                    <div class="card-header">
+
+                        <h2><%= book.title %></h2>
+                    </div>
+
+                    <img src="<%=book.images%>" alt="">
+
+                    <div class="card-body">
+
+                        <p><%= book.description%></p>
+
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="delete/<%=book.id %>">
+                            Borrar
+                        </a>
+                    </div>
+
+                </div>
+
+            <% })  %>
+
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
