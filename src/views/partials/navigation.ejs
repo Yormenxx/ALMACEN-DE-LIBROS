@@ -1,23 +1,54 @@
 <header>
 
 
-    <nav>
+
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+              <a class="btn btn-ghost text-xl" href="https://www.linkedin.com/in/juan-manuel-ortiz-47b93424a/" target="_blank">Juma</a>
+            </div>
+            <div class="flex-none">
+              <ul class="menu menu-horizontal text-lg px-1 ">
+                <li ><a href="#inicio">Inicio</a></li>
+                <li><button  onclick="my_modal_3.showModal()">Agregar nuevo libro</button>
+                    <dialog id="my_modal_3" class="modal bg-transparent flex items-center justify-center  shadow-2xl">
+                      <div class="modal-box ">
+                        <form method="dialog">
+                          <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                        </form>
+                        <form method="POST" action="new-data" class="flex flex-col justify-center items-center">
+
+                            <div class="p-3 flex flex-col items-center justify-center">
+                                <label for="title" class="text-xl capitalize">Titulo</label>
+                                <input class="w-[260px] p-3 outline-none border border-neutral-800 rounded-lg" type="text" name="title" placeholder="ingresa un titulo" autofocus required>
+                            </div>
+                           
+                            <div class="p-3 flex flex-col  items-center justify-center">
+                                <label for="author" class="text-xl capitalize">Autor</label>
+                                <input class="w-[260px] p-3 outline-none border border-neutral-800 rounded-lg" type="text" name="author" placeholder="ingresa el autor" autofocus required>
+                            </div>
+                
+                            <div class="p-3 flex flex-col items-center justify-center">
+                                <label for="images" class="text-xl capitalize">Imagen</label>
+                                <input class="w-[260px] p-3 outline-none border border-neutral-800 rounded-lg" type="text" name="images" placeholder="https://website.com/" autofocus required>
+                            </div>
+                
+                            <div class="p-3 flex flex-col items-center justify-center">
+                                <label for="description" class="text-xl capitalize">Descripción</label>
+                                <textarea class="w-[260px] h-[50px] p-3 resize-none border border-neutral-800 rounded-lg" name="description" id="description" ></textarea>
+                            </div>
+                            <div>
+                                <input class="w-[230px] h-9 cursor-pointer bg-neutral-800  rounded-lg shadow-xl text-white hover:opacity-80 duration-150 ease-in-out " type="submit" value="Ingresar libro">
+
+                            </div>
+                        </form>
+                      </div>
+                    </dialog></li>
+                <li><a href="https://github.com/Yormenxx" target="_blank">Github</a></li>
+              </ul>
+            </div>
+          </div>
     
-        <ul>
-            <li>
-                <a href="/">Inicio</a>
-            </li>
-    
-            <li>
-                <a href="/new-data">Crear libro</a>
-            </li>
-    
-            <li>
-                <a href="https://github.com/Yormenxx" target="_blank">Github</a>
-            </li>
-        </ul>
-    
-    </nav>
+   
 
 
 </header>

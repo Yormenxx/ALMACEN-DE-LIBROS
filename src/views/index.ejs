@@ -9,37 +9,41 @@
     <title>Inicio libros</title>
 
 </head>
-<body>
+<body >
 
     <%- include("partials/navigation")%>
 
+    <span id="#inicio"></span>
+
+    <div class="flex flex-col justify-center items-center">
+
+        <label for="" class="text-2xl font-semibold p-3">Filtra tus libros</label>
+
+        <input class="w-[350px] h-[40px] border border-neutral-900 rounded-xl p-2"  type="text" id="filterInput" placeholder="Filtrar cards..." />
+
+    </div>
+
     <div class="container-cards">
 
-        <div class="row">
+        <div class="flex flex-wrap justify-center items-center">
 
             <% books.forEach(function(book){ %>
 
-                <div class="card">
+                <div class="w-[240px] h-[375px] card   shadow-xl m-5 rounded-lg  " >
 
 
-                    <div class="card-header">
-
-                        <h2><%= book.title %></h2>
-                    </div>
-
-                    <img src="<%=book.images%>" alt="">
-
-                    <div class="card-body">
-
-                        <p><%= book.description%></p>
-
-                    </div>
-
-                    <div class="card-footer">
-                        <a href="delete/<%=book.id %>">
-                            Borrar
-                        </a>
-                    </div>
+                
+                    <img src="<%=book.images%>" alt="book" class="w-[100%] h-[200px] rounded-lg object-cover">                      
+                  
+                      <div class="card-body flex flex-col items-center justify-center flex-wrap">
+                        <h2 class="font-bold text-center text-xl "><%= book.title %></h2>
+                        <p class="text-lg text-center"><%= book.description%></p>
+                        <div class="card-actions justify-center">
+                            <a href="delete/<%=book.id %>" class="px-5 py-1 text-white bg-red-500  rounded-xl hover:opacity-80 duration-150 ease-in-out">
+                                Borrar
+                            </a>
+                        </div>
+                      </div>
 
                 </div>
 
@@ -50,6 +54,7 @@
 
     </div>
 
+    <script src="/js/filter.js"></script>
 
 </body>
 </html>
