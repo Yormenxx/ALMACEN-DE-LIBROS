@@ -1,4 +1,4 @@
-[![libros.png](https://i.postimg.cc/zDj1JHfD/libros.png)](https://postimg.cc/yWkGjd92)
+
 
 # ALMACEN DE LIBROS
 
